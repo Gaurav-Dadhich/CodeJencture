@@ -163,3 +163,5 @@ var page5 = document.querySelector('.page4');
      document.getElementById('cursor-blur').style.display = 'block';
  });
  
+
+ 

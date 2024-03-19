@@ -522,9 +522,14 @@ form{
   height: 5px;
   opacity: 0;
   transition: 0.3s;
-  background-color:#009B6A;
+  background-color: #009B6A;
   top: 50%;
   transform: translateY(-50%);
+  z-index: 20;
+}
+
+label{
+  background-color: #009B6A;
 }
 
 .input-container span::before{
@@ -540,12 +545,41 @@ form{
   transform: translateY(-50%);
   left: 25px;
   font-size: 0.8rem;
+  ;
 }
 
 .input-container.focus span::before,
 .input-container.focus span::after{
   width: 50%;
   opacity: 1;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-container {
+  flex: 1;
+  margin-right: 20px; /* Adjust as needed */
+}
+
+.input-container:last-child {
+  margin-right: 0;
+}
+
+.input-container input,
+.input-container label,
+.input-container span {
+  display: block;
+}
+
+.input-container input {
+  width: 100%;
+}
+
+.input-container span {
+  margin-top: 8px; /* Adjust vertical alignment */
 }
 
 .contact-info {
@@ -924,6 +958,3 @@ form{
     font-size: 0.8em;
   }
 }
-
-
-
