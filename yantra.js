@@ -12,6 +12,58 @@ function revealToSpan() {
     elem.appendChild(parent);
   });
 }
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('registration-form');
+  const messageDiv = document.getElementById('message');
+
+  form.addEventListener('submit', async (event) => {
+    event.preventDefault();
+
+    const requestData = {
+      teamName: form.elements.teamName.value,
+      leaderNum: form.elements.leaderNum.value,
+      leaderName: form.elements.leaderName.value,
+      memNum: form.elements.memNum.value,
+      memName: form.elements.memName.value
+    };
+
+    try {
+      const response = await fetch('http://localhost:3040/register', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(requestData),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        showError(errorData.error || 'Failed to register');
+      } else {
+        const responseData = await response.json();
+        showMessage('Registration successful');
+      }
+    } catch (error) {
+      console.error('Error registering:', error.message);
+      showError('Internal server error');
+    }
+  });
+
+  function showMessage(message) {
+    messageDiv.innerText = message;
+    messageDiv.classList.remove('error');
+    messageDiv.style.display = 'block';
+  }
+
+  function showError(message) {
+    messageDiv.innerText = message;
+    messageDiv.classList.add('error');
+    messageDiv.style.display = 'block';
+  }
+});
+
+
+
 function loaderAnimation() {
   var tl = gsap.timeline();
   tl.from(".child span", {

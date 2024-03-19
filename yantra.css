@@ -958,3 +958,22 @@ label{
     font-size: 0.8em;
   }
 }
+
+.message-container {
+  display:none;
+  color: #fff; /* Text color */
+  padding: 30px; /* Padding */
+  margin-top: 10px;
+  border-radius: 5px; /* Border radius */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow */
+  background: linear-gradient(45deg, #4CAF50, #2E7D32); /* Gradient background */
+  transition: background-color 0.3s ease; /* Transition effect */
+ 
+}
+.error {
+  background: linear-gradient(45deg, #f44336, #d32f2f); /* Gradient background */
+}
+
+.message-container:hover {
+  background: linear-gradient(45deg, #66BB6A, #388E3C); /* Hover gradient background */
+}
