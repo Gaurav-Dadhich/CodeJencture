@@ -135,7 +135,7 @@ window.addEventListener('scroll', function() {
 
 gsap.to("#nav", {
   backgroundColor:"black",
-  duration: infinite,
+  duration: "infinite",
   height: "80px",
   scrollTrigger: {
     trigger: "#nav",
@@ -195,8 +195,8 @@ var page5 = document.querySelector('.page4');
  });
 
  var page5 = document.querySelector('.footer');
-
  page5.addEventListener('mouseenter', function() {
+   
      document.getElementById('cursor').style.display = 'none';
      document.getElementById('cursor-blur').style.display = 'none';
  });
