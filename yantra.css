@@ -926,6 +926,7 @@ label{
   #a {
     display:none;
     background-color: #000;
+    width:460px;
     }
   #page1 h1{
     font-size: 3em;
