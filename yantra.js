@@ -187,7 +187,7 @@ gsap.to("#main", {
     scrub: 2,
   },
 });
-var page5 = document.querySelector('#page-4');
+var page5 = document.querySelector('.page4');
  page5.addEventListener('mouseenter', function() {
 
      document.getElementById('cursor').style.display = 'none';
@@ -195,8 +195,8 @@ var page5 = document.querySelector('#page-4');
  });
 
  var page5 = document.querySelector('.footer');
-
  page5.addEventListener('mouseenter', function() {
+   
      document.getElementById('cursor').style.display = 'none';
      document.getElementById('cursor-blur').style.display = 'none';
  });
