@@ -172,7 +172,7 @@ video {
 }
 
 #page1 h1::before {
-  content: "CODEJECTURE";
+  content: "CODEJENCTURE";
   position: absolute;
   color: #000;
   top: -5px;

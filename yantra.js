@@ -135,7 +135,7 @@ window.addEventListener('scroll', function() {
 
 gsap.to("#nav", {
   backgroundColor:"black",
-  duration: 0.5,
+  duration: infinite,
   height: "80px",
   scrollTrigger: {
     trigger: "#nav",
